@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+
+
+.ocean-detail {
+    color: #3bafcc;
+}
+
+.home {
+    height: 100vh;
+    background-image: url(../img/Background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    max-width: 70vw;
+    margin: 0 auto;
+    //background-color: grey;
+}
+
+.logo {
+    color: #262626;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links a {
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
+.burger {
+    display: none;
+}
+
+//-------------------------//
+//  -----  Landscape tablet screen  -----  //
+//-------------------------//
+
+@media screen and (max-width: 1024px){
+    .nav-links {
+        width: 100%;
+    }
+}
+
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.home-content {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+.home-title {
+   margin: auto;
+   h1 {
+       color: whitesmoke;
+       font-size: 5rem;
+       font-weight: 300;
+   }
+}
+
+.btn {
+    background-color: #3bafcc;
+    border: none;
+    padding: 0.5em 2em;
+    margin-top: 2em;
+    border-radius: 1em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+    }
+}
+
+
+// ---------- About ---------- //
+
+#about {
+    height: 100vh;
+    background-color: white;
+    color: #262626;
+    //display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns:  1fr 2fr 2fr 1fr;
+
+}
+
+.about-foto {
+    //border: 1px solid red;
+    //display: flex;
+    //justify-content: flex-end;
+    padding-right: 1em;
+    margin: auto auto;
+    border-right: 5px solid #262626;
+    
+    
+    //max-width: 40vw;
+    //padding-right: 3em;
+    img {
+        //padding: 1.5em;
+        max-width: 100%;
+        max-height: 35em;
+        margin-right: 50px;
+        //border: 0.7em solid #3bafcc;
+        //border-radius: 2em;
+        //margin-left: 20em;
+        
+    }
+}
+
+
+
+.about-text {
+    //border: 1px solid blue;
+    //max-width: 30vw;
+    margin: auto 0;
+    max-height: 65vh;
+    padding-left: 2em;
+    //padding-left: 1em;
+    .about-me, .about-skills {
+        h2 {
+            padding-bottom: 0.5em;
+            letter-spacing: 2px;
+            font-size: 3em;
+        }
+        p {
+            padding-bottom: 0.5em;
+            line-height:2em;
+            letter-spacing: 1px;
+            font-size: 1em;
+        }
+        .skil {
+            font-size: 0.7vw;
+        }
+    }
+
+}
+
+.btn-about {
+    background-color: #3bafcc;
+    font-size: 0.7vw;
+    border: none;
+    padding: 0.5em 2em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+    }
+}
+
+.skill-bar {
+    margin-bottom: 5px;
+}
+
+
+#contact {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/Background-clean.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    align-items: center;
+    .contact-info {
+        color: whitesmoke;
+        //padding-left: 7em;
+        text-align: center;
+        h2 {
+            font-size: 2vw;
+            padding-bottom: 1em;
+        }
+        p {
+            font-size: 1vw;
+            padding-bottom: 1.5em;
+        }
+    }
+    .contact-map {
+        max-height: 50vh;
+        //border: 1px solid red;
+        overflow:hidden;
+        padding-bottom: 50vh;
+        position:relative;
+    }
+    .contact-map iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+        padding-left: 2em;
+    }
+    .my-adres {
+
+        display: flex;
+        justify-content: center;
+
+    }
+    .pad-icon {
+        margin: auto 0;
+        padding-right: 1em;
+    }
+}
+
+
+
+// //------- Mobile -------
+
+// @media screen and (max-width: 420px){
+//     //---------
+//     //Home Page
+//     //---------
+//     .home {
+//         background-image: url(../img/Background-mobile.jpg);
+//         background-color: black;
+        
+//     }
+//     .logo {
+//         color: whitesmoke;
+//     }
+//     .nav-links a{
+//         color: whitesmoke;
+//     }
+//     .home-content {
+//         h1{
+//             font-size: 3.5em;
+//         }
+//     }
+//     .btn {
+//         font-size: 0.7em;
+//     }
+
+
+//     //---------
+//     //About page
+//     //---------
+//     #about {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//         height: 110vh;
+//         margin: auto 0;
+//         .about-foto {
+//             display: none;
+//         }
+//         .about-text {
+//             height: 50vh;
+//             margin-top: 3em;
+//             padding: 0 1.5em;
+//         }
+//         .about-me {
+//             h2 {
+//                 font-size: 10vw;
+//             }
+//             p {
+//                 font-size: 4vw;
+//             }
+//             margin-bottom: 2em;
+//         }
+//         .btn-about {
+//             font-size: 0.7em;
+//         }
+//         .about-skills {
+//             height: 50vh;
+//             margin-bottom: 2em;
+//             h2 {
+//                 font-size: 10vw;
+//             }
+//             .skil {
+//                 font-size: 4vw;
+//             }
+//         }
+//     } 
+
+    
+
+    
+
+
+//     //------------
+//     //Contact page
+//     //------------
+//     #contact {
+//         height: 60vh;
+//         display: flex;
+//         justify-content: center;
+//         flex-direction: column;
+//         background-image: none;
+//         background-color: #262626;
+//         .contact-map iframe{
+//             padding: 0 2em;
+//         }
+//         .contact-info {
+//             //border: 1px solid greenyellow;
+//             color: whitesmoke;
+//             //width: 50vw;
+//             margin: auto auto;
+//             //text-align: center;
+//             //border-right: 5px solid whitesmoke;
+//             max-height: 50%;
+//             //display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             flex-direction: column;
+//             h2 {
+//                 font-size: 2em;
+//                 padding-bottom: 0.5em;
+//             }
+//             p {
+//                 font-size: 1em;
+//                 padding-bottom: 0.5em;
+//             }
+//         }
+//     }
+    
+//  }
+
+
+//  // ------ Tablet --------
+
+//  @media screen and (max-width: 768px){
+//     body {
+//         overflow-x: hidden;
+//     }
+//     .home {
+        
+//         background-image: url(../img/bg_tablet.png);
+//         background-size: cover;
+//     }
+//     .logo {
+//         color: whitesmoke;
+//     }
+//     .nav-links {
+//         position: absolute;
+//         right: 0px;
+//         height: 92vh;
+//         top: 8vh;
+
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         transform: translateX(100%);
+//         transition: transform 0.5s ease-in;
+//     }
+//     .nav-links li {
+//         color: white;
+//         opacity: 0;
+//     }
+//     .burger {
+//         display: block;
+
+        
+//         cursor: pointer;
+//     }
+
+//     #about {
+//         display: flex;
+//         margin-top: 0;
+//         padding-top: à;
+//     }
+    
+//     .about-grid {
+//         display: none;
+//     }
+
+//     .about-foto {
+//         display: none;
+//     }
+    
+//     .about-text {
+//         padding: 2em 4em;
+//         text-align: center;
+//         .about-me, .about-skills {
+//             h2 {
+//                 font-size: 2.5em;
+//             }
+//             p {
+//                 font-size: 1.5em;
+//             }
+//             .skil {
+//                 font-size: 2vw;
+//             }
+//         }
+//     }
+//     .btn-about {
+//         font-size: 2vw;
+//         margin-bottom: 4em;
+//     }
+//     .skill-bar {
+//         margin-bottom: 5px;
+//     }
+// } 
+
+
+// #contact {
+//     height: 100vh;
+//     width: 100vw;
+//     display: block;
+//     justify-content: center;
+//     background-color: #262626;
+//     background-image: none;
+//     .contact-info {
+//         //border: 1px solid greenyellow;
+//         color: whitesmoke;
+//         margin-bottom: 7em;
+
+//         //width: 50vw;
+//         //margin: auto auto;
+//         //text-align: center;
+//         //border-right: 5px solid whitesmoke;
+//         max-height: 50%;
+//         //display: flex;
+//         //justify-content: center;
+//         align-items: center;
+//         //flex-direction: column;
+//         text-align: center;
+//         h2 {
+//             font-size: 2.5em;
+//             padding: 2em 0;
+//         }
+//         p {
+//             font-size: 1.3em;
+//             padding-bottom: 1.1em;
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
